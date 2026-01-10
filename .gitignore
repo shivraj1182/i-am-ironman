@@ -57,3 +57,13 @@ logs/
 .pytest_cache/
 .coverage
 htmlcov/
+
+
+# Security - Encrypted API keys & credentials
+# NEVER commit these sensitive files to GitHub
+data/.master_key
+data/api_key.encrypted
+data/*_meta.json
+data/.secrets/
+.env
+.env.local
