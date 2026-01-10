@@ -19,8 +19,20 @@ numpy>=1.21.0
 python-dotenv>=0.19.0
 jsonschema>=4.0.0
 click>=8.0.0
+requests>=2.28.0
 
-# Optional: For advanced NLP
-spacy>=3.0.0
-nltk>=3.6.0
-textblob>=0.17.0
+# Machine Learning & NLP
+spacy>=3.5.0
+scikit-learn>=1.2.0
+nltk>=3.8.1
+pandas>=1.5.0
+
+# Online AI Integration
+google-generativeai>=0.3.0
+
+# Database
+
+# (SQLite3 is built-in with Python)
+
+# Logging & Monitoring
+python-json-logger>=2.0.0
