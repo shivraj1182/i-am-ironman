@@ -1,0 +1,26 @@
+# Voice and Audio Processing
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.11
+pyttsx3>=2.90
+vosk>=0.3.21
+PyAudio>=0.2.11
+
+# System Control
+psutil>=5.9.0
+screenbright>=0.2.6
+winreg>=1.0.0 # Windows only
+
+# Audio Control
+pycaw>=20181226
+pulseaudio>=0.0.5  # Linux only
+
+# Utilities
+numpy>=1.21.0
+python-dotenv>=0.19.0
+jsonschema>=4.0.0
+click>=8.0.0
+
+# Optional: For advanced NLP
+spacy>=3.0.0
+nltk>=3.6.0
+textblob>=0.17.0
