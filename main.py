@@ -23,7 +23,7 @@ class IronmanAssistant:
         self.assistant_name = None
         self.is_listening = False
         self.load_config()
-            self.api_manager = SecureAPIManager()
+        self.api_manager = SecureAPIManager()
         
     def load_config(self):
         """Load or create configuration file"""
