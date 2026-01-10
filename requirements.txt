@@ -10,7 +10,6 @@ psutil>=5.9.
 
 # Audio Control
 pycaw>=20181226
-pulseaudio>=0.0.5  # Linux only
 
 # Utilities
 numpy>=1.21.0
