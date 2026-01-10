@@ -84,8 +84,8 @@ class IronmanAssistant:
         except Exception as e:
             print(f"⚠️ TTS Error: {e}")
     
-    95
-    (self, timeout=5):
+
+    def listen(self, timeout=5):
         """Listen for voice command"""
         try:
             with sr.Microphone(device_index=16, ) as source:
