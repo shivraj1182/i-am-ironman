@@ -6,7 +6,7 @@ vosk>=0.3.21
 PyAudio>=0.2.11
 
 # System Control
-psutil>=5.9.
+psutil>=5.90
 
 # Audio Control
 pycaw>=20181226
