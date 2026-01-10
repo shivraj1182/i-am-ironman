@@ -12,6 +12,7 @@ import threading
 import speech_recognition as sr
 import pyttsx3
 from datetime import datetime
+from secure_api_manager import SecureAPIManager, setup_api_key
 
 class IronmanAssistant:
     def __init__(self):
@@ -22,6 +23,7 @@ class IronmanAssistant:
         self.assistant_name = None
         self.is_listening = False
         self.load_config()
+                self.api_manager = SecureAPIManager()
         
     def load_config(self):
         """Load or create configuration file"""
@@ -52,6 +54,13 @@ class IronmanAssistant:
         
         self.speak(f"Alright, I'm {name}. Pleasure to serve you, sir.")
         print(f"✅ Assistant configured as: {name}")
+
+                # Setup API key for optional online features
+        print("\n🔑 API Key Configuration")
+        api_choice = input("Would you like to add an API key now? (y/n): ").lower()
+        if api_choice == 'y':
+            self.api_manager = setup_api_key()
+        print()
         print("="*60 + "\n")
     
     def save_config(self):
