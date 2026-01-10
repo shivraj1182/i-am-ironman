@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """
 I Am Ironman - A Local Voice Assistant for your PC
@@ -88,7 +89,8 @@ class IronmanAssistant:
     def listen(self, timeout=5):
         """Listen for voice command"""
         try:
-            with sr.Microphone(device_index=16, ) as source:
+        
+            (device_index=16, ) as source:
                 self.recognizer.adjust_for_ambient_noise(source, duration=0.5)
                 print("🎤 Listening...")
                 audio = self.recognizer.listen(source, timeout=timeout)
