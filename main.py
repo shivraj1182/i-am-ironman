@@ -91,8 +91,9 @@ class IronmanAssistant:
         try:
             with sr.Microphone() as source:
             self.recognizer.adjust_for_ambient_noise(source, duration=1.0)
-            self.recognizer.energy_threshold = 4000                            "🎤 Listening...")
-                audio = self.recognizer.listen(source, timeout=timeout)
+            self.recognizer.energy_threshold = 4000
+            print("🎤 Listening...")               
+            audio = self.recognizer.listen(source, timeout=timeout)
 
             text = self.recognizer.recognize_google(audio)
             print(f"👤 You: {text}")
