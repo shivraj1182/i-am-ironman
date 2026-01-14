@@ -89,7 +89,7 @@ class IronmanAssistant:
     def listen(self, timeout=5):
         """Listen for voice command"""
         try:
-            with sr.Microphone(device_index=16) as source:
+            with sr.Microphone() as source:
                 self.recognizer.adjust_for_ambient_noise(source, duration=0.5)
                 print("🎤 Listening...")
                 audio = self.recognizer.listen(source, timeout=timeout)
