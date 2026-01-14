@@ -104,8 +104,9 @@ class IronmanAssistant:
             self.speak("Network error. Check your connection.")
             return None
         except Exception as e:
-            print(f"⚠️ Error: {e}")
-            return None    
+            if 'timed out' not in str(e).lower():
+                print(f"⚠️ Error: {e}")
+            return None
             
     def process_command(self, command):
         """Process voice commands"""
