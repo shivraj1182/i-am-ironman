@@ -86,12 +86,12 @@ class IronmanAssistant:
             print(f"⚠️ TTS Error: {e}")
     
 
-    def listen(self, timeout=5):
+    def listen(self, timeout=10):
         """Listen for voice command"""
         try:
             with sr.Microphone() as source:
-                self.recognizer.adjust_for_ambient_noise(source, duration=0.5)
-                print("🎤 Listening...")
+            self.recognizer.adjust_for_ambient_noise(source, duration=1.0)
+            self.recognizer.energy_threshold = 4000                            "🎤 Listening...")
                 audio = self.recognizer.listen(source, timeout=timeout)
 
             text = self.recognizer.recognize_google(audio)
