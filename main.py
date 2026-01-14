@@ -92,12 +92,12 @@ class IronmanAssistant:
         
                 with sr.Microphone(device_index=16) as source:
                         self.recognizer.adjust_for_ambient_noise(source, duration=0.5)
-                print("🎤 Listening...")
-                audio = self.recognizer.listen(source, timeout=timeout)
+                    print("🎤 Listening...")
+                    audio = self.recognizer.listen(source, timeout=timeout)
             
-            text = self.recognizer.recognize_google(audio)
-            print(f"👤 You: {text}")
-            return text.lower()
+                text = self.recognizer.recognize_google(audio)
+                print(f"👤 You: {text}")
+                return text.lower()
         except sr.UnknownValueError:
             self.speak("Sorry, I didn't catch that.")
             return None
